@@ -19,6 +19,77 @@ module.exports = function(defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
+  app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+  app.import('bower_components/jquery-ui/themes/base/jquery-ui.css');
+  // app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+
+
+  // app.import('bower_components/ember/ember-template-compiler.js');
+// Import boostrap
+// app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', {
+//     destDir: 'assets'
+// });
+// app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot', {
+//     destDir: 'fonts'
+// });
+// app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf', {
+//     destDir: 'fonts'
+// });
+// app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg', {
+//     destDir: 'fonts'
+// });
+// app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', {
+//     destDir: 'fonts'
+// });
+// app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2', {
+//     destDir: 'fonts'
+// });
+
+  app.import('bower_components/jquery-ui/jquery-ui.min.js');
+  app.import('bower_components/modernizr/src/Modernizr.js');
+  app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+  app.import('bower_components/jquery.nicescroll/dist/jquery.nicescroll.min.js');
+// app.import('bower_components/select2/select2.css');
+
+// app.import('bower_components/underscore/underscore.js');
+// app.import('bower_components/select2/select2_locale_zh-CN.js');
+// app.import('vendor/webuploader-0.1.5/webuploader.js');
+// app.import('vendor/webuploader-0.1.5/webuploader.css');
+// app.import('bower_components/animate.css/animate.css');
+// app.import("bower_components/moment/moment.js");
+// app.import("bower_components/moment/locale/zh-cn.js");
+
+// app.import("vendor/jBox-0.3.2/Source/jBox.js");
+// app.import("vendor/jBox-0.3.2/Source/jBox.css");
+// app.import("vendor/jBox-0.3.2/Source/themes/NoticeBorder.css");
+
+// app.import('vendor/jquery.validationEngine/jquery.validationEngine-zh_CN.js');
+// app.import('vendor/jquery.validationEngine/jquery.validationEngine.min.js');
+// app.import('vendor/jquery.validationEngine/validationEngine.jquery.css');
+
+// app.import("bower_components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js");
+// app.import("bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css");
+
+//zeroclipboard是一款可以通过js代码复制的命令
+// app.import("bower_components/zeroclipboard/dist/ZeroClipboard.js");
+// app.import("bower_components/zeroclipboard/dist/ZeroClipboard.swf", {
+//     destDir: "assets"
+// });
+
+//请不要替换为bower_components
+// app.import("vendor/bootstrap-daterangepicker/daterangepicker.css");
+// app.import("vendor/bootstrap-daterangepicker/daterangepicker.js");
+
+// app.import('vendor/tinymce-lang/zh_CN.js'); //rich editor
+
+// app.import("bower_components/numeraljs/numeral.js");
+// app.import("bower_components/numeraljs/languages/chs.js");
+
+// app.import("bower_components/swfobject/swfobject/swfobject.js");
+// app.import("vendor/audiojs/audio.min.js");
+// app.import("vendor/audiojs/audiojs.swf");
+
+
 
   return app.toTree();
 };

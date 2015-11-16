@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>BlogAdmin</title>
-    <meta name="description" content="">
+    <meta name="description" content="BlogAdmin">
+    <meta name="keywords" content="BlogAdmin">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{content-for 'head'}}
@@ -13,11 +14,19 @@
     <link rel="stylesheet" href="assets/blog-admin.css">
 
     {{content-for 'head-footer'}}
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/html5shiv.js"></script>
+    <script src="assets/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
     {{content-for 'body'}}
 
     <script src="assets/vendor.js"></script>
+    <!-- 模板 -->
+    <script src="assets/js/script.js"></script>
+    <!-- 模板 end-->
     <script src="assets/blog-admin.js"></script>
 
     {{content-for 'body-footer'}}
