@@ -21,34 +21,41 @@ module.exports = function(defaults) {
   // along with the exports of each module as its value.
   app.import('bower_components/bootstrap/dist/css/bootstrap.css');
   app.import('bower_components/jquery-ui/themes/base/jquery-ui.css');
-  // app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+  // app.import('vendor/muban/css/bootstrap.min.css');
 
+  app.import('vendor/muban/fonts/css/font-awesome.min.css');
+  // app.import('vendor/muban/css/custom-ico-fonts.css');
 
-  // app.import('bower_components/ember/ember-template-compiler.js');
-// Import boostrap
-// app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', {
-//     destDir: 'assets'
-// });
-// app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot', {
-//     destDir: 'fonts'
-// });
-// app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf', {
-//     destDir: 'fonts'
-// });
-// app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg', {
-//     destDir: 'fonts'
-// });
-// app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', {
-//     destDir: 'fonts'
-// });
-// app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2', {
-//     destDir: 'fonts'
-// });
+  app.import('bower_components/bootstrap/dist/css/bootstrap.min.css');
 
+  app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot', {
+      destDir: 'fonts'
+  });
+  app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf', {
+      destDir: 'fonts'
+  });
+  app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg', {
+      destDir: 'fonts'
+  });
+  app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', {
+      destDir: 'fonts'
+  });
+  app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2', {
+      destDir: 'fonts'
+  });
+  app.import('vendor/muban/css/bootstrap-reset.css');
+  app.import('vendor/muban/css/jquery-ui-1.10.3.css');
+  app.import('vendor/muban/css/style.css');
+  
+
+  app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+  app.import('bower_components/jquery-migrate/jquery-migrate.min.js');
   app.import('bower_components/jquery-ui/jquery-ui.min.js');
   app.import('bower_components/modernizr/src/Modernizr.js');
-  app.import('bower_components/bootstrap/dist/js/bootstrap.js');
   app.import('bower_components/jquery.nicescroll/dist/jquery.nicescroll.min.js');
+  
+
+  app.import('bower_components/iCheck/icheck.min.js');
 // app.import('bower_components/select2/select2.css');
 
 // app.import('bower_components/underscore/underscore.js');
@@ -88,8 +95,7 @@ module.exports = function(defaults) {
 // app.import("bower_components/swfobject/swfobject/swfobject.js");
 // app.import("vendor/audiojs/audio.min.js");
 // app.import("vendor/audiojs/audiojs.swf");
-
-
+// app.import("vendor/muban/js/scripts.js");
 
   return app.toTree();
 };
