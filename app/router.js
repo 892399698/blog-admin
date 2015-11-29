@@ -6,9 +6,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+	this.resource("core",function(){
+		this.route("column");
+		this.route("commit");
+	})
 	// this.resource();
 	// this.route("");
-	this.route("login");
+	// this.route("login");
 });
 
 export default Router;
