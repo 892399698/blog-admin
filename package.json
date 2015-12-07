@@ -38,6 +38,7 @@
     "ember-export-application-global": "^1.0.4"
   },
   "dependencies": {
+    "ember-cli-compass-compiler": "^0.3.2",
     "mongodb": "^2.0.49"
   }
 }
