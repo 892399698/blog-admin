@@ -1,7 +1,7 @@
 export default Ember.Route.extend({
 	model:function(){
 		return Ember.RSVP.hash({
-			// articles:this.store.find("article"),
+			articles:this.store.find("article"),
 		})
 	},
 	setupController:function(c,m){
