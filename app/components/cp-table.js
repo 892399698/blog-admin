@@ -1,7 +1,7 @@
 /** ud-table 组建
     描述：表格排序、隐藏列、选择行、...
-    作者：tango
-    日期：2015/11/7
+    作者：
+    日期：
     参数：
         class[String] 样式名称
         needSort[Boolean] 需要排序, 默认false

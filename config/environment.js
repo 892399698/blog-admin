@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'blog-admin',
     environment: environment,
-    baseURL: '/entry',
+    baseURL: '/entry/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
