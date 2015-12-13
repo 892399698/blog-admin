@@ -7,7 +7,9 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
 	this.resource("core",function(){
-		this.route("column");
+		this.route("column",function(){
+			this.route("edit",{path:"edit/:id"})
+		});
 		this.route("commit");
 	})
 	// this.resource();
