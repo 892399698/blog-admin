@@ -58,13 +58,14 @@ module.exports = function(defaults) {
   app.import('bower_components/iCheck/icheck.min.js');
 // app.import('bower_components/select2/select2.css');
 
-// app.import('bower_components/underscore/underscore.js');
+app.import('bower_components/underscore/underscore.js');
+app.import('bower_components/ember/ember-template-compiler.js');
 // app.import('bower_components/select2/select2_locale_zh-CN.js');
 // app.import('vendor/webuploader-0.1.5/webuploader.js');
 // app.import('vendor/webuploader-0.1.5/webuploader.css');
 // app.import('bower_components/animate.css/animate.css');
-// app.import("bower_components/moment/moment.js");
-// app.import("bower_components/moment/locale/zh-cn.js");
+app.import("bower_components/moment/moment.js");
+app.import("bower_components/moment/locale/zh-cn.js");
 
 // app.import("vendor/jBox-0.3.2/Source/jBox.js");
 // app.import("vendor/jBox-0.3.2/Source/jBox.css");

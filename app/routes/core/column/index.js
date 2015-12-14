@@ -1,10 +1,10 @@
 export default Ember.Route.extend({
 	model:function(){
 		return Ember.RSVP.hash({
-			// articles:this.store.find("article"),
+			columns:this.store.find("column"),
 		})
 	},
 	setupController:function(c,m){
 		c.setProperties(m);
 	}
-})
+})	
