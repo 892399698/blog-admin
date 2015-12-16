@@ -1,0 +1,54 @@
+<form class="form-horizontal" {{action "submit" on="submit"}}>
+    <div class="form-group">
+        <label class="col-lg-2 col-sm-2 control-label">栏目名称</label>
+        <div class="col-lg-10">
+            <input autofocus required type="text" class="form-control" placeholder="栏目名称" value={{column.name}}>
+            {{!-- <p class="help-block">Example block-level help text here.</p> --}}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg-2 col-sm-2 control-label">所属栏目</label>
+        <div class="col-lg-10">
+        <select class="form-control" value={{column.parent_id}}>
+          <option>请选择栏目</option>
+        </select>
+            {{!-- <p class="help-block">Example block-level help text here.</p> --}}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg-2 col-sm-2 control-label">排序</label>
+        <div class="col-lg-10">
+          <input type="number" class="form-control" placeholder="排序" value={{column.order}}>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg-2 col-sm-2 control-label">seo标题</label>
+        <div class="col-lg-10">
+            <input type="text" class="form-control" placeholder="seo标题" value={{column.title}}>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg-2 col-sm-2 control-label">关键字</label>
+        <div class="col-lg-10">
+            <input type="text" class="form-control" placeholder="关键字" value={{column.keyword}}>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg-2 col-sm-2 control-label">描述</label>
+        <div class="col-lg-10">
+            {{textarea class="form-control" value=column.desc placeholder="描述"}}
+        </div>
+    </div>
+
+    
+    <div class="form-group">
+        <div class="col-lg-offset-2 col-lg-10">
+            <button type="submit" class="btn btn-primary">保存</button>
+        </div>
+    </div>
+</form>
