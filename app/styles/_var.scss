@@ -1,0 +1,134 @@
+$rootPath: "";
+$imagePath: "../images/";
+$white: #fff;
+$blue: #008cc7;
+$gray: #788288;
+$green: #57b856;
+$darkBlue: #414a5d;
+$bootstrapBlue: #337ab7;
+$powderGreen: #65CEA7;
+@mixin clearfix() {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin ellipsis() {
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin x-word-break() {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+@mixin opacity($opacity: .8) {
+    filter: $opacity * 100;
+    opacity: $opacity;
+}
+
+@mixin text-shadow($params: 0px 0px 1px #aaa) {
+    // -moz-text-shadow: $params;
+    -webkit-text-shadow: $params;
+    text-shadow: $params;
+}
+
+@mixin box-shadow($params: 1px 1px 1px #ddd) {
+    // -moz-box-shadow: $params;
+    -webkit-box-shadow: $params;
+    box-shadow: $params;
+}
+
+@mixin transition($params) {
+    -webkit-transition: $params;
+    // -moz-transition: $params;
+    // -ms-transition: $params;
+    // -o-transition: $params;
+    transition: $params;
+}
+
+@mixin transform($params) {
+    -webkit-transform: $params;
+    // -moz-transform: $params;
+    // -ms-transform: $params;
+    // -o-transform: $params;
+    transform: $params;
+}
+
+@mixin animation($params) {
+    -webkit-animation: $params;
+    // -moz-animation: $params;
+    // -ms-animation: $params;
+    // -o-animation: $params;
+    animation: $params;
+}
+
+@mixin border-radius($params: 5px) {
+    -webkit-border-radius: $params;
+    // -moz-border-radius: $params;
+    // -ms-border-radius: $params;
+    // -o-border-radius: $params;
+    border-radius: $params;
+}
+
+@mixin gradient-linear($fromColor:#000, $toColor:#fff) {
+    background-image: -moz-linear-gradient(top, $fromColor, $toColor);
+    background-image: -webkit-linear-gradient(top, $fromColor, $toColor);
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$fromColor, endColorstr=$toColor);
+    // -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=$fromColor, endColorstr=$toColor)";
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+.ellipsis {
+    @include ellipsis;
+}
+
+.word-break {
+    @include x-word-break;
+}
+
+.border-radius {
+    @include border-radius;
+}
+
+.text-shadow {
+    @include text-shadow;
+}
+
+.scrollbar {
+    overflow: auto;
+    &::-webkit-scrollbar-thumb {
+        background-color: #65cea7;
+        // border-left: 2px solid transparent;
+        // border-top: 2px solid transparent;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: #424f63;
+        // border-left: 2px solid transparent;
+        // border-top: 2px solid transparent
+    }
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+}
+
+.scrollbar-x {
+    overflow-x: auto;
+}
+
+.scrollbar-y {
+    overflow-x: auto;
+}

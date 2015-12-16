@@ -1,0 +1,20 @@
+@import "_var";
+body{
+    >.alert {
+        display: none;
+        position: fixed;
+        top: 30px;
+        left: 50%;
+        z-index: 100000000;
+        width: 500px;
+        margin-left: -250px;
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        @include box-shadow();
+    }
+    .mgl-20{
+        margin-left:20px;
+    }
+}

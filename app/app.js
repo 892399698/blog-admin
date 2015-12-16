@@ -73,14 +73,15 @@ var injectAppData = function(data) {
     // common.injectData("custom_plugin", data.custom_plugin);
     // common.injectData("currentAgents", data.agents);
 
-    // var UDD = _.extend(data, {
-    //     isAdmin: user.role == "admin",
-    //     isAgent: user.role == "agent",
-    //     role_can: role_can, //权限：能够访问的
-    //     role_no: role_no //权限：不能访问的
-    // });
-    // common.injectData("UDD", UDD);
-    // window.UDD = UDD;
+    var UDD = _.extend(data, {
+        // isAdmin: user.role == "admin",
+        // isAgent: user.role == "agent",
+        // role_can: role_can, //权限：能够访问的
+        // role_no: role_no //权限：不能访问的
+    });
+    common.injectData("UDD", UDD);
+    UDD.urls=urls;
+    window.UDD = UDD;
 };
 
 // export default App;
