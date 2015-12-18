@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
         if(ajaxing){
           return false;
         }
-        var url = UDD.urls.apiBase+'/columns';
+        // var url = UDD.urls.apiBase+'/columns';
         data.save().then(function(){
             common.tips.success("保存成功！");
             self.transitionToRoute("core.column");
@@ -20,7 +20,7 @@ export default Ember.Controller.extend({
           common.tips.error(res.msg);
         }).finally(function(){
           self.set("ajaxing",false);
-        })
+        });
         // $.ajax({
         //   url:url,
         //   data:data,
@@ -41,4 +41,4 @@ export default Ember.Controller.extend({
 
       }
   }
-})
+});
