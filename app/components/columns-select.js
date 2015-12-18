@@ -8,18 +8,38 @@ import common from "blog-admin/common";
  */
 export default SelectObject.extend({
     init: function() {
-        var self=this;
-        Ember.$.get(UDD.urls.apiBase+"/columns").then(function(res){
-            if(res.code===1000){
-                self.set("content",res.columns);
+        var self = this;
+        Ember.$.get(UDD.urls.apiBase + "/columns").then(function(res) {
+            if (res.code === 1000) {
+                self.set("content", res.columns);
                 console.log(self.get("content"));
-            }else{
+                self.setVal();
+            } else {
                 common.tips.error(res.msg);
             }
         })
         this._super(...arguments);
     },
-   
+    setVal: function(val) {
+        var value = this.get("value") || val,
+            content = this.get("content"),
+            valuePath = this.get("optionValuePath"),
+            contentFirst = content.get("firstObject"),
+            selectedValue = this.get("selectedValue");
+        if (value) {
+            this.set("selectedValue", content.findBy(valuePath, value));
+            selectedValue = this.get("selectedValue");
+        }
+        if (selectedValue) {
+            this.set("value", Ember.get(selectedValue, valuePath));
+            value = this.get("value");
+        }
+        if (!value && !selectedValue) {
+            if (!this.get("prompt")) {
+                this.set("selectedValue", contentFirst);
+            }
+        }
+    },
     optionLabelPath: "name",
     optionValuePath: "_id"
 })
