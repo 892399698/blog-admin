@@ -1,10 +1,10 @@
 export default Ember.Component.extend({
-    // layoutName: "components/ud-select",
+    layoutName: "components/cp-select",
     content: null,
     selectedValue: null,
     tagName: "select",
     init: function() {
-        var content = this.get('content'),
+        var content = this.get('content')||[],
             value = this.get("value"),
             valuePath = this.get("optionValuePath"),
             contentFirst = content.get("firstObject"),

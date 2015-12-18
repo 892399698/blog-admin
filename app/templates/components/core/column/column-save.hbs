@@ -16,11 +16,12 @@
         {{!-- <select class="form-control" value={{column.parent_id}}>
           <option>请选择栏目</option>
         </select> --}}
-        {{!-- {{select-2 value=column.parent_id promt="请选择栏目"}} --}}
-
+        {{columns-select prompt="请选择栏目" value=column.parent_id optionLabelPath="name" optionValuePath="_id" class="form-control col-xs-3"}}
         {{!-- {{select-2 content=columns value=column.parent_id optionValuePath="_id"  optionLabelPath="name"}} --}}
         
-        {{columns-select columnId=column.parent_id onlyId=true inputSize="input-sm"}}
+        {{!-- {{columns-select columnId=column.parent_id onlyId=true inputSize="input-sm"}} --}}
+
+
         </div>
     </div>
 
