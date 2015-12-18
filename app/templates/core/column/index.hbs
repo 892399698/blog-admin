@@ -39,3 +39,13 @@
 	</div>
 </div>
 
+
+{{#cp-dialog title="提示" style="margin-top:15%;" fire=ifDialog submitAction=dialogCallback}}
+  <div class="modal-body">
+    {{dialogContent}}
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">取消</button>
+      <button type="submit" class="btn btn-success btn-sm">确定</button>
+  </div>
+{{/cp-dialog}}

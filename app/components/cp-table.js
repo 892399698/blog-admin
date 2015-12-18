@@ -59,7 +59,11 @@ export default Ember.Component.extend({
     switchColumnAction: "switchColumn",
     checkedChangedAction: "checkedChanged",
     classNames: ["ud-table"],
-    attributeBindings: ["style"],
+    attributeBindings: ["myStyle"],
+    myStyle: Ember.computed('color', function() {
+        var style = this.get('style');
+        return new Ember.Handlebars.SafeString(style);
+      }).property("style"),
     initData: function() {
         var self = this;
         var el = this.el = this.$();

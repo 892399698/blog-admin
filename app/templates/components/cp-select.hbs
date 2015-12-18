@@ -1,0 +1,8 @@
+{{#if prompt}}
+    <option>{{prompt}}</option>
+{{/if}}
+{{#each content key="@index" as |item|}}
+    <option value="{{object-get item optionValuePath}}" selected={{is-equal item selectedValue}}>
+        {{object-get item optionLabelPath}}
+    </option>
+{{/each}}

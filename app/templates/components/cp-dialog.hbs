@@ -1,0 +1,18 @@
+
+<div class="modal-dialog" role="document" {{realStyle}}>
+    <div class="modal-content">
+      <div class="modal-content">
+      <form {{action 'submit' on="submit"}} class="form-horizontal">
+        {{!-- 如果调用时自己设定了header,即header值为true,这里的header会被移除 --}}
+        {{#unless header}}
+          <div class="modal-header">
+          {{!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> --}}
+            <a {{action "close"}} target="_blank" class="close"><i class="fa fa-times-circle"></i></a>
+            <h4 class="modal-title">{{title}}</h4>
+          </div>
+        {{/unless}}
+        {{yield}}
+      </form>
+    </div>
+  </div>
+</div>
