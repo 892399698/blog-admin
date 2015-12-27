@@ -3,7 +3,9 @@
 var common = {
     injectData: function(name, data, regType) {
         var regName = (regType || "default") + ":" + name;
-        if (!name) return;
+        if (!name){
+            return false;
+        }
 
         currentApp.register(regName, data || {}, {
             instantiate: false
@@ -20,7 +22,9 @@ var common = {
             container: element
         */
         _base: function(type, text, container) {
-            if (!type || !text) return;
+            if (!type || !text){
+                return false;
+            }
 
             type = type || "info";
             container = $(container || "body");
@@ -32,8 +36,8 @@ var common = {
                 text,
                 '</div>'
             ].join(''));
-            var offset = container.offset();
-            var ow = container.outerWidth();
+            // var offset = container.offset();
+            // var ow = container.outerWidth();
             var _timeout;
             var _remove = function() {
                 _timeout = setTimeout(function() {
@@ -67,7 +71,9 @@ var common = {
 
     },
     scrollbar: function(el, cfg) {
-        if (!el) return;
+        if (!el) {
+            return false;
+        }
 
         try {
             switch (cfg) {
@@ -91,5 +97,5 @@ var common = {
 
         } catch (ex) {}
     },
-}
+};
 export default common;

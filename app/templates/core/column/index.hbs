@@ -13,6 +13,7 @@
 			<table>
 				<thead>
 					<tr>
+						<th></th>
 						<th>名称</th>
 						<th>创建时间</th>
 						<th>修改时间</th>
@@ -22,16 +23,37 @@
 				<tbody>
 				{{#each columns as |column|}}
 					<tr>
+						<td style="width:20px;">
+							{{#if column.childrenColumn.length}}
+								<a {{action  "toggleColumn" column}} class="btn btn-sm"><i class='{{if column.display "fa-minus" "fa-plus"}} fa'></i></a>
+							{{/if}}
+						</td>
 						<td>{{column.name}}</td>
 						<td>{{format-datetime column.created_at}}</td>
 						<td>{{column.updated_at}}</td>
 						<td>
-							{{#link-to "core.column.edit" column.id class="btn"}}
+							{{#link-to "core.column.edit" column._id class="btn"}}
 								编辑
 							{{/link-to}}
 							<a href="" {{action "del" column}} class="btn">删除</a>
 						</td>
 					</tr>
+					{{#if column.display}}
+						{{#each column.childrenColumn as |cColumn|}}
+							<tr class="bg-efefef">
+								<td></td>
+								<td>{{cColumn.name}}</td>
+								<td>{{format-datetime cColumn.created_at}}</td>
+								<td>{{cColumn.updated_at}}</td>
+								<td>
+									{{#link-to "core.column.edit" cColumn._id class="btn"}}
+										编辑
+									{{/link-to}}
+									<a href="" {{action "del" cColumn}} class="btn">删除</a>
+								</td>
+							</tr>
+						{{/each}}
+					{{/if}}
 				{{/each}}
 				</tbody>
 			</table>

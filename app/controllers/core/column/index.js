@@ -1,6 +1,13 @@
 import common from 'blog-admin/common';
+var g=Ember.get;
+var s=Ember.set;
 export default Ember.Controller.extend({
     actions: {
+        toggleColumn:function(item){
+            // item.toggleProperty("display");
+            var display=g(item,"display");
+            s(item,"display",!display);
+        },
         del: function(item) {
             var self = this;
             if (!item) {
@@ -24,11 +31,12 @@ export default Ember.Controller.extend({
             }
             self.set("ajaxing", true);
             $.ajax({
-                url: UDD.urls.apiBase + "/columns/" + item.id,
+                url: UDD.urls.apiBase + "/columns/" + item._id,
                 method: "DELETE",
             }).then(function(res) {
                 if (res.code === 1000) {
-                    self.store.deleteRecord(item);
+                    // self.store.deleteRecord(item);
+                    self.send("refreshModel");
                 } else {
                     common.tips.error(res.msg);
                 }

@@ -17,7 +17,7 @@ export default Ember.Controller.extend({
 	      $.post(url,data).then(function(res){
 	      	if(res.code ===1000){
 	      		common.tips.success("保存成功！");
-            self.transitionToRoute("column.index");
+            self.transitionToRoute("core.column");
 	      	}else{
 	      		common.tips.error(res.msg);
 	      	}
