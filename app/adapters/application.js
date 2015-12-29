@@ -13,18 +13,18 @@ Adapter = DS.RESTAdapter.extend({
   ajax: function (url, type, hash) {
     return this._super(url, type, hash);
   },
-  isSuccess :function(status, headers, payload){
-    var resData=payload;
-    var exception = resData.exception || {};
+  handleResponse :function(status, headers, resData){
     var code = resData.code;
+    var exception = resData.exception || {};
+
     delete resData.code;
     switch (code) {
       case 1000:
-        return this._super(status, headers, payload);
+        return this._super(status, headers, resData);
       case 3005:
         return location.replace("/users/sign_in");
       default :
-        return new DS.InvalidError(exception);
+        return new DS.AdapterError(exception);
     }
   },
   // ajaxSuccess: function (xhr, resData) {
