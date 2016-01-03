@@ -28,7 +28,7 @@
 								<a {{action  "toggleColumn" column}} class="btn btn-sm"><i class='{{if column.display "fa-minus" "fa-plus"}} fa'></i></a>
 							{{/if}}
 						</td>
-						<td>{{column.name}}</td>
+						<td>{{#link-to "core.column.show" column._id}}{{column.name}}{{/link-to}}</td>
 						<td>{{format-datetime column.created_at}}</td>
 						<td>{{format-datetime column.updated_at}}</td>
 						<td>
@@ -42,7 +42,7 @@
 						{{#each column.childrenColumn as |cColumn|}}
 							<tr class="bg-efefef">
 								<td></td>
-								<td>{{cColumn.name}}</td>
+								<td>{{#link-to "core.column.show" cColumn._id}}{{cColumn.name}}{{/link-to}}</td>
 								<td>{{format-datetime cColumn.created_at}}</td>
 								<td>{{format-datetime cColumn.updated_at}}</td>
 								<td>

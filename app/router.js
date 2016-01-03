@@ -10,6 +10,7 @@ Router.map(function() {
 		this.route("column",function(){
 			this.route("edit",{path:"edit/:id"});
 			this.route("new");
+			this.route("show",{path:"/:id"});
 		});
 		this.route("commit");
 	})
