@@ -8,7 +8,7 @@
 		{{#each switchColumnOptions as |item|}}
 	    <li data-index="{{item.index}}" data-name="{{item.name}}">
 	    	<label>
-		    	<input type="checkbox" {{bind-attr checked=item.checked}}>
+		    	<input type="checkbox" checked={{item.checked}}>
 		    	<a>{{item.text}}</a>
 	    	</label>
 	    </li>
