@@ -8,12 +8,18 @@ export default Ember.Route.extend({
 			return false;	
 		}
 		var articlesDefer=Ember.RSVP.defer();
-		this.store.find("article",id).then(function(res){
+		Ember.$.get(UDD.urls.apiBase+'/articles/'+id).then(function(res){
 			console.log(res)
 			articlesDefer.resolve(res);
-		},function(err){
-			articlesDefer.reject(err);
+		},function(){
+
 		})
+		// this.store.find("article",id).then(function(res){
+		// 	console.log(res)
+		// 	articlesDefer.resolve(res);
+		// },function(err){
+		// 	articlesDefer.reject(err);
+		// })
 		return Ember.RSVP.hash({
 			articles:articlesDefer.promise
 		})
