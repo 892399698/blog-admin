@@ -18,8 +18,8 @@ Router.map(function() {
 		this.route("article",function(){
 			this.route("new");
 			this.route("edit");
-		})
-	})
+		});
+	});
 	// this.resource();
 	// this.route("");
 	// this.route("login");
