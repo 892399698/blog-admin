@@ -8,11 +8,21 @@ export default Ember.Route.extend({
 			return false;	
 		}
 		var articlesDefer=Ember.RSVP.defer();
-		Ember.$.get(UDD.urls.apiBase+'/articles/'+id).then(function(res){
-			console.log(res)
-			articlesDefer.resolve(res);
-		},function(){
-
+		// this.store.find("article",id).then(function(res){
+		// 	console.log(res)
+		// 	articlesDefer.resolve(res);
+		// },function(err){
+		// 	articlesDefer.reject(err);
+		// })
+		Ember.$.get(UDD.urls.apiBase+"/articles/"+id).then(function(res){
+			if(res.code===1000){
+				articlesDefer.resolve(res.articles);
+			}else{
+				articlesDefer.reject(res.msg);
+				// common.tips.error(res.msg)
+			}
+		},function(err){
+			articlesDefer.reject("获取文章列表的错误!");
 		})
 		// this.store.find("article",id).then(function(res){
 		// 	console.log(res)

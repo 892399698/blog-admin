@@ -12,7 +12,13 @@ Router.map(function() {
 			this.route("new");
 			this.route("show",{path:"/:id"});
 		});
+		// 评论管理
 		this.route("commit");
+		// 文章管理
+		this.route("article",function(){
+			this.route("new");
+			this.route("edit");
+		})
 	})
 	// this.resource();
 	// this.route("");
