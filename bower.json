@@ -21,6 +21,6 @@
     "underscore": "~1.8.3",
     "moment": "~2.10.6",
     "select2": "3.5.2",
-    "webuploader": "*"
+    "webuploader": "https://github.com/fex-team/webuploader.git#~0.1.5"
   }
 }
