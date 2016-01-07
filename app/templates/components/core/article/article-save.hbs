@@ -49,7 +49,7 @@
 		<label class="col-lg-2 col-sm-2 control-label">权限:</label>
 		 <div class="col-lg-10">
 		 	{{!-- {{input type="text" class="form-control" placeholder="描述" value=content.click}} --}}
-		 	{{cp-select prompt="权限"}}
+		 	{{cp-select class="form-control" prompt="权限"}}
 		 </div>
 	</div>
 	<div class="panel">
@@ -58,5 +58,9 @@
 			{{cp-editor value=content.body}}
 		</div>
 	</div>
+</form>
+<form action="/blog_interface/upload_img" method="post" enctype="multipart/form- data" >
+	<input type=file />
+	<input type="submit" value="提交" />
 </form>
 {{/cp-form}}

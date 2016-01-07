@@ -61,11 +61,13 @@ app.import('bower_components/select2/select2.css');
 app.import('bower_components/underscore/underscore.js');
 app.import('bower_components/ember/ember-template-compiler.js');
 app.import('bower_components/select2/select2_locale_zh-CN.js');
-// app.import('vendor/webuploader-0.1.5/webuploader.js');
-// app.import('vendor/webuploader-0.1.5/webuploader.css');
+app.import('bower_components/webuploader/dist/webuploader.min.js');
+app.import('bower_components/webuploader/dist/webuploader.css');
 // app.import('bower_components/animate.css/animate.css');
 app.import("bower_components/moment/moment.js");
 app.import("bower_components/moment/locale/zh-cn.js");
+//富文本编辑器
+app.import('vendor/tinymce-lang/zh_CN.js'); //rich editor
 
 // app.import("vendor/jBox-0.3.2/Source/jBox.js");
 // app.import("vendor/jBox-0.3.2/Source/jBox.css");
@@ -88,7 +90,6 @@ app.import("bower_components/moment/locale/zh-cn.js");
 // app.import("vendor/bootstrap-daterangepicker/daterangepicker.css");
 // app.import("vendor/bootstrap-daterangepicker/daterangepicker.js");
 
-// app.import('vendor/tinymce-lang/zh_CN.js'); //rich editor
 
 // app.import("bower_components/numeraljs/numeral.js");
 // app.import("bower_components/numeraljs/languages/chs.js");
