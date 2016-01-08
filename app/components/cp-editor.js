@@ -114,7 +114,6 @@ export default Ember.Component.extend({
             // formData: {
             //     token: this.get('uploadToken')
             // },
-            sendAsBinary:true,
             thumb: {
                 width: 110,
                 height: 110,
