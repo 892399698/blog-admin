@@ -1,56 +1,59 @@
 {{#cp-form }}
-<form class="form-horizontal" {{action "submit" content on="submit"}} style="width:600px">
-	<div class="form-group">
-		<label class="col-lg-2 col-sm-2 control-label">文章标题:</label>
-		 <div class="col-lg-10">
-		 	{{input autofocus=autofocus required=required type="text" class="form-control" placeholder="文章标题" value=content.title}}
-		 </div>
-	</div>
-	<div class="form-group">
-		<label class="col-lg-2 col-sm-2 control-label">自定义属性:</label>
-		 <div class="col-lg-10">
-            <label class="checkbox-inline">
-                <input type="checkbox" id="inlineCheckbox1" value="option1">头条
-            </label>
-            <label class="checkbox-inline">
-                <input type="checkbox" id="inlineCheckbox2" value="option2">推荐
-            </label>
-            <label class="checkbox-inline">
-                <input type="checkbox" id="inlineCheckbox3" value="option3">文章课程
-            </label>
+<h1>{{#if content.id}}新增{{else}}编辑{{/if}}文章</h1>
+<form class="form-horizontal" {{action "submit" content on="submit"}}>
+	<div style="width:600px;">
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">文章标题:</label>
+			 <div class="col-lg-10">
+			 	{{input autofocus=autofocus required=required type="text" class="form-control" placeholder="文章标题" value=content.title}}
+			 </div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">自定义属性:</label>
+			 <div class="col-lg-10">
+	            <label class="checkbox-inline">
+	                <input type="checkbox" id="inlineCheckbox1" value="option1">头条
+	            </label>
+	            <label class="checkbox-inline">
+	                <input type="checkbox" id="inlineCheckbox2" value="option2">推荐
+	            </label>
+	            <label class="checkbox-inline">
+	                <input type="checkbox" id="inlineCheckbox3" value="option3">文章课程
+	            </label>
 
-		 </div>
-	</div>
-	<div class="form-group">
-		<label class="col-lg-2 col-sm-2 control-label">文章栏目:</label>
-		 <div class="col-lg-10">
-        	{{columns-select prompt="请选择栏目" value=column.parent_id optionLabelPath="name" optionValuePath="_id" class="form-control col-xs-3"}}
-		 </div>
-	</div>
-	<div class="form-group">
-		<label class="col-lg-2 col-sm-2 control-label">关键字:</label>
-		 <div class="col-lg-10">
-		 	{{input type="text" class="form-control" placeholder="关键字" value=content.keyword}}
-		 </div>
-	</div>
-	<div class="form-group">
-		<label class="col-lg-2 col-sm-2 control-label">描述:</label>
-		 <div class="col-lg-10">
-		 	{{textarea type="text" class="form-control" placeholder="描述" value=content.description}}
-		 </div>
-	</div>
-	<div class="form-group">
-		<label class="col-lg-2 col-sm-2 control-label">点击量:</label>
-		 <div class="col-lg-10">
-		 	{{input type="text" class="form-control" placeholder="描述" value=content.click}}
-		 </div>
-	</div>
-	<div class="form-group">
-		<label class="col-lg-2 col-sm-2 control-label">权限:</label>
-		 <div class="col-lg-10">
-		 	{{!-- {{input type="text" class="form-control" placeholder="描述" value=content.click}} --}}
-		 	{{cp-select class="form-control" prompt="权限"}}
-		 </div>
+			 </div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">文章栏目:</label>
+			 <div class="col-lg-10">
+	        	{{columns-select prompt="请选择栏目" value=column.parent_id optionLabelPath="name" optionValuePath="_id" class="form-control col-xs-3"}}
+			 </div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">关键字:</label>
+			 <div class="col-lg-10">
+			 	{{input type="text" class="form-control" placeholder="关键字" value=content.keyword}}
+			 </div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">描述:</label>
+			 <div class="col-lg-10">
+			 	{{textarea type="text" class="form-control" placeholder="描述" value=content.description}}
+			 </div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">点击量:</label>
+			 <div class="col-lg-10">
+			 	{{input type="text" class="form-control" placeholder="描述" value=content.click}}
+			 </div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">权限:</label>
+			 <div class="col-lg-10">
+			 	{{!-- {{input type="text" class="form-control" placeholder="描述" value=content.click}} --}}
+			 	{{cp-select class="form-control" prompt="权限"}}
+			 </div>
+		</div>
 	</div>
 	<div class="panel">
 		<div class="panel-heading">文章内容</div>
@@ -59,8 +62,5 @@
 		</div>
 	</div>
 </form>
-<form action="/blog_interface/upload_img" method="post" enctype="multipart/form- data" >
-	<input type=file />
-	<input type="submit" value="提交" />
-</form>
+
 {{/cp-form}}
