@@ -12,7 +12,7 @@ export default SelectObject.extend({
         Ember.$.get(UDD.urls.apiBase + "/columns").then(function(res) {
             if (res.code === 1000) {
                 self.set("content", res.columns);
-                console.log(self.get("content"));
+                // console.log(self.get("content"));
                 self.setVal();
             } else {
                 common.tips.error(res.msg);
