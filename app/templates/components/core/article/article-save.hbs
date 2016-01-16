@@ -49,10 +49,11 @@
 			 </div>
 		</div>
 		<div class="form-group">
-			<label class="col-lg-2 col-sm-2 control-label">权限:</label>
+			<label class="col-lg-2 col-sm-2 control-label">状态:</label>
 			 <div class="col-lg-10">
 			 	{{!-- {{input type="text" class="form-control" placeholder="描述" value=content.click}} --}}
-			 	{{cp-select class="form-control" prompt="权限"}}
+			 	{{log status_dict}}
+			 	{{cp-select class="form-control" optionValuePath="id" optionLabelPath="name" content=status_dict value=content.status }}
 			 </div>
 		</div>
 	</div>

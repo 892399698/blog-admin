@@ -1,3 +1,30 @@
 {{#cp-toolbar}}
 {{#link-to "core.article.new" class="btn btn-success btn-sm"}}添加文章{{/link-to}}
 {{/cp-toolbar}}
+
+{{#cp-table}}
+<table>
+  <thead>
+    <tr>
+      <th>标题</th>
+      <th>栏目</th>
+      <th>状态</th>
+      <th>点击数</th>
+      <th>创建时间</th>
+      <th>更新时间</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each formatArticles as |article|}}
+    <tr>
+      <td>{{article.title}}</td>
+      <td>{{article.column_name}}</td>
+      <td>{{article.flag}}</td>
+      <td>{{article.click}}</td>
+      <td>{{format-datetime article.updated_at}}</td>
+      <td>{{format-datetime article.created_at}}</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
+{{/cp-table}}

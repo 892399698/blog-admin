@@ -26,7 +26,7 @@ export default Ember.Component.extend({
             }
             saveData.save().then((res) => {
                 common.tips.success("保存成功！");
-                self.get("currentController").transitionToRoute("core.article",column_id);
+                self.get("currentController").transitionToRoute("core.column",column_id);
             }, (res) => {
                 var err = res.msg || "保存失败！";
                 common.tips.error(err);
