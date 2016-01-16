@@ -14,7 +14,10 @@ export default Ember.Route.extend({
 		// },function(err){
 		// 	articlesDefer.reject(err);
 		// })
-		Ember.$.get(UDD.urls.apiBase+"/articles/"+id).then(function(res){
+		var p={
+			column_id:id
+		}
+		Ember.$.get(UDD.urls.apiBase+"/articles",p).then(function(res){
 			if(res.code===1000){
 				articlesDefer.resolve(res.articles);
 			}else{
