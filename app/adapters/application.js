@@ -18,6 +18,7 @@ Adapter = DS.RESTAdapter.extend({
     var exception = resData.exception || {};
 
     delete resData.code;
+    console.log(resData)
     switch (code) {
       case 1000:
         return this._super(status, headers, resData);

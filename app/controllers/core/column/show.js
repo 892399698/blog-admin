@@ -13,4 +13,7 @@ export default Ember.Controller.extend({
         console.log(formatArticles)
         return formatArticles;
     }.property("articles"),
+    actions:{
+        
+    }
 })

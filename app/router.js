@@ -17,7 +17,7 @@ Router.map(function() {
 		// 文章管理
 		this.route("article",function(){
 			this.route("new");
-			this.route("edit");
+			this.route("edit",{path:"edit/:id"});
 		});
 	});
 	// this.resource();

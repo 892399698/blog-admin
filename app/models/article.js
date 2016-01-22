@@ -10,5 +10,7 @@ export default DS.Model.extend({
 	status:DS.attr(),
   keyword:DS.attr(),
   description:DS.attr(),
-  body:DS.attr()
+  body:DS.attr(),
+  created_at:DS.attr(),
+  updated_at:DS.attr(),
 })

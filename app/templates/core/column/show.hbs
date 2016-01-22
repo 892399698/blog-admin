@@ -12,6 +12,7 @@
       <th>点击数</th>
       <th>创建时间</th>
       <th>更新时间</th>
+      <th>操作</th>
     </tr>
   </thead>
   <tbody>
@@ -23,6 +24,11 @@
       <td>{{article.click}}</td>
       <td>{{format-datetime article.updated_at}}</td>
       <td>{{format-datetime article.created_at}}</td>
+      <td>
+        {{#link-to "core.article.edit" article._id class="btn btn-default btn-xs"}}编辑{{/link-to}}
+        <a class="btn btn-default btn-xs" {{action "delete" article._id}}>删除</a>
+        {{!-- <a {{action "edit" article}} href="" class="">编辑</a> --}}
+      </td>
     </tr>
   {{/each}}
   </tbody>
