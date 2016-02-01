@@ -16,16 +16,14 @@ Adapter = DS.RESTAdapter.extend({
   handleResponse :function(status, headers, resData){
     var code = resData.code;
     var exception = resData.exception || {};
-
     delete resData.code;
-    console.log(resData)
     switch (code) {
       case 1000:
         return this._super(status, headers, resData);
       case 3005:
         return location.replace("/users/sign_in");
       default :
-        return new DS.AdapterError(exception);
+        return new DS.AdapterError(resData.msg);
     }
   },
   // ajaxSuccess: function (xhr, resData) {
