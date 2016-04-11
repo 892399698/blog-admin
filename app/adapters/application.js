@@ -1,4 +1,3 @@
-import DS from 'ember-data';
 import config from '../config/environment';
 import Ember from 'ember';
 import App from '../app';
